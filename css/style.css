@@ -1,0 +1,86 @@
+/*Color:
+blue foncé - background: #36626a; 
+
+blue marin - background: #588d9c; 
+
+blue clair - background: #73b1c1; 
+
+jaune - background: #f1d18a; 
+
+background clair - background: #f0ece2; 
+*/
+
+/*---------------------------*/
+/*TOUS LE SITE*/
+/*---------------------------*/
+*, body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0ece2; 
+    margin:0;
+}
+/*---------------------------*/
+/*HEADER*/
+/*---------------------------*/
+header {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: content-box;
+    padding: 0.6em;
+    pointer-events: auto;
+    background-color: #588d9c;
+    border-bottom: solid 5px;
+    border-color: #36626a;
+  }
+header div, header div form{
+    margin:auto;
+    background: #588d9c;
+    padding:0.5em;
+}
+.logo{
+    width:150px;
+    border:solid 3px #36626a;
+    border-radius: 0.8em;
+}
+#pseudo{
+    background-color: #f0ece2;
+    color:black;
+}
+.label{
+    color:white;
+    background: #588d9c;
+    padding:0.5em;
+}
+#affichP{
+    color: black;
+    border:solid 2px #36626a;
+    background-color: #f0ece2;
+    padding:0.5em;
+    margin: 0.6em;
+}
+/*---------------------------*/
+/*BOUTON*/
+/*---------------------------*/
+.button{
+    border:solid 2px #36626a;
+    border-radius: 0.8em;
+    padding:0.5em;
+    color:white;
+    background-color: #73b1c1;
+    text-decoration: none;
+    display: inline-block;
+}
+/*---------------------------*/
+/*MAIN*/
+/*---------------------------*/
+main {
+    margin:0.4em;
+    padding:0.4em;
+}
+.discussion{
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 7px 5px 5px gray;
+}

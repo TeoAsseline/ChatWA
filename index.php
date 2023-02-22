@@ -1,9 +1,6 @@
-//controleur
-
-
-//Test
 <?php
+    require_once("./page/header.php");
     require_once('./fonction/BDD.php');
     $liste = select();
-    print_r($liste);
+    require_once("./page/accueil.php");
 ?>
