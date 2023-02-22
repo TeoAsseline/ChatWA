@@ -24,7 +24,7 @@ background clair - background: #f0ece2;
 header {
     display: grid;
     gap: 10px;
-    width: auto;
+    width: 99%;
     grid-template-columns: repeat(3, 1fr);
     box-sizing: content-box;
     padding: 0.6em;
@@ -32,6 +32,7 @@ header {
     background-color: #588d9c;
     border-bottom: solid 5px;
     border-color: #36626a;
+    position:fixed;
   }
 header div, header div form{
     margin:auto;
@@ -49,7 +50,7 @@ header div, header div form{
 }
 .label{
     color:white;
-    background: #588d9c;
+    background-color: #588d9c;
     padding:0.5em;
 }
 #affichP{
@@ -72,15 +73,59 @@ header div, header div form{
     display: inline-block;
 }
 /*---------------------------*/
-/*MAIN*/
+/*MAIN ET AFFICHER*/
 /*---------------------------*/
 main {
-    margin:0.4em;
-    padding:0.4em;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.titre{
+    margin: 0.3em 25%;
+    padding:0.3em;
+    padding-left: 17%;
+    padding-right: 15%;
 }
 .discussion{
     background-color: white;
+    padding: 0.2em;
     margin-left: 25%;
     margin-right: 25%;
     box-shadow: 7px 5px 5px gray;
+}
+.divM{
+    border:solid 2px #36626a;
+    background-color: white;
+    border-radius: 0.2em;
+    padding:0.5em;
+    margin:0.4em;
+}
+#Mtemps{
+    background-color: white;
+    font-style: italic;
+    font-size: 10px;
+    padding: 0.3em;
+}
+#Mcontenu{
+    background-color: white;
+    display: block;
+    padding: 0.3em;
+    font-size: 14px;
+}
+#Mauteur{
+    background-color: white;
+    padding: 0.3em;
+    font-weight: bold;
+}
+#messageF{
+    margin:0.4em;
+    background-color: white;
+    padding:0.4em;
+}
+#messageF input{
+    display: block;
+    width:80%;
+    padding: auto;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }

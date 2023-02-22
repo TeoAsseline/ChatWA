@@ -8,24 +8,40 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./image/logo.png">
     <title>Chat WA</title>
+    <script> 
+    let audioG = new Audio('./audio/wario.mp3');
+    let audioO = new Audio('./audio/wariomath.mp3');
+    function go(){
+        audioG.volume = 0.2;
+        audioG.play();
+    }
+    function out(){
+        audioO.volume = 0.2;
+        audioO.play();
+    }
+    </script>
 </head>
 <body>
     <!--Menu de navigation-->
     <header>
-            <div class="menuleft">
-                <a href='#' class="button" >Accueil</a>
-                <?php if(isset($_GET['pseudo'])):?>
-                <label class="label" id="affichP"><?php echo $_GET['pseudo'];?></label>
-                <?php endif;?>
-            </div>
-            <div class="menucenter">
-                <img class="logo" src="./image/logo.png" alt="LogoDuSite">
-            </div>
-            <div class="menuright">
-                <form action="#">
+            <div>
+                <form action="#" onsubmit="go();">
                     <label class="label" for="pseudo">Pseudo</label>
                     <input type="text" class="button" id="pseudo" name="pseudo" placeholder="Menwizz..." required/>
                     <input type="submit" class="button" name="rechercher" value="Envoyer"/>
                 </form>
-            </div>      
+            </div> 
+            <div>
+                <img class="logo" src="./image/logo.png" alt="LogoDuSite">
+            </div>
+            <div>
+                <?php if(isset($_GET['pseudo'])):?>
+                    <form  action="#" onsubmit="out();">
+                        <label class="label" id="affichP"><?php echo $_GET['pseudo'];?></label>
+                        <input type="submit" class="button" name="deconnexion" value="Déconnexion"/>
+                    </form>
+                <?php else: ?>
+                    <label class="label" style="display:block;">Bienvenue sur Chat WA, veuillez entrer un pseudo pour commencer à WAAA !</label>
+                <?php endif;?>
+            </div>     
     </header>
