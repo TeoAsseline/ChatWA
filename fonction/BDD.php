@@ -15,16 +15,4 @@
         }
         return $linkpdo;
     }
-   
-    function select($id=null){
-        $db = ConnexionBD();
-        if(is_null($id)){
-            $req = $db->prepare("SELECT * FROM chat");
-            $req->execute();
-        } else {
-            $req = $db->prepare("SELECT * FROM chat WHERE id=:id");
-            $req->execute(array(':id' => $id));
-        }
-        return $req->fetchAll();
-    }
 ?>
