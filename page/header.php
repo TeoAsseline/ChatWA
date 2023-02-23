@@ -28,11 +28,12 @@
                 <form action="#" onsubmit="go();">
                     <label class="label" for="pseudo">Pseudo</label>
                     <input type="text" class="button" id="pseudo" name="pseudo" placeholder="Menwizz..." required/>
-                    <input type="submit" class="button" name="rechercher" value="Envoyer"/>
+                    <input type="submit" class="button" name="rechercher" 
+                    <?php if(isset($_GET['pseudo'])):?>value="Changer" <?php else: ?> value="Choisir" <?php endif;?>/>
                 </form>
             </div> 
             <div>
-                <img class="logo" src="./image/logo.png" alt="LogoDuSite">
+                <a href="#" style="background-color: #588d9c;"><img class="logo" src="./image/logo.png" alt="LogoDuSite" onclick="out();"></a>
             </div>
             <div>
                 <?php if(isset($_GET['pseudo'])):?>
