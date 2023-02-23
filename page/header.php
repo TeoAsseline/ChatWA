@@ -37,7 +37,7 @@
             </div>
             <div>
                 <?php if(isset($_GET['pseudo'])):?>
-                    <form  action="#" onsubmit="out();">
+                    <form  action="#">
                         <label class="label" id="affichP"><?php echo $_GET['pseudo'];?></label>
                         <input type="submit" class="button" name="deconnexion" value="Déconnexion"/>
                     </form>
