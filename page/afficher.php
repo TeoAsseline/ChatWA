@@ -2,7 +2,7 @@
 <?php
     require("./fonction/datefonction.php");
     if(isset($_GET['pseudo']) && $_GET['pseudo']!=null){
-        $pseudo=$_GET['pseudo'];
+        $pseudo=htmlspecialchars($_GET['pseudo']);
     } else {
         $pseudo=null;
     }
