@@ -25,7 +25,7 @@
     <!--Menu de navigation-->
     <header>
             <div>
-                <form action="#" onsubmit="go();">
+                <form onsubmit="go();">
                     <label class="label" for="pseudo">Pseudo</label>
                     <input type="text" class="button" id="pseudo" name="pseudo" placeholder="Menwizz..." required/>
                     <input type="submit" class="button" name="rechercher" 
@@ -37,7 +37,7 @@
             </div>
             <div>
                 <?php if(isset($_GET['pseudo'])):?>
-                    <form  action="#">
+                    <form>
                         <label class="label" id="affichP"><?php echo $_GET['pseudo'];?></label>
                         <input type="submit" class="button" name="deconnexion" value="Déconnexion"/>
                     </form>

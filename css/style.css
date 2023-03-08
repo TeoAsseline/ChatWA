@@ -18,6 +18,10 @@ background clair - background: #f0ece2;
     background-color: #f0ece2; 
     margin:0;
 }
+img{
+    width:75px;
+    background-color: white;
+}
 /*---------------------------*/
 /*HEADER*/
 /*---------------------------*/
@@ -80,10 +84,11 @@ main {
     padding-bottom: 5%;
 }
 .titre{
-    margin: 0.3em 25%;
+    margin: auto;
     padding:0.3em;
     padding-left: 17%;
     padding-right: 15%;
+    text-align: center;
 }
 .discussion{
     background-color: white;
@@ -128,4 +133,34 @@ main {
     margin: auto;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+#retour{
+    padding:0.6em;
+    background-color: white;
+    margin: 0.5em;
+    border:solid 2px;
+    text-decoration: none;
+}
+/*---------------------------*/
+/*SALON*/
+/*---------------------------*/
+.divC{
+    border:solid 2px #36626a;
+    background-color: white;
+    border-radius: 0.2em;
+    padding:0.5em;
+    margin:2em;
+}
+#Cnom{
+    background-color: white;
+    display: inline-block;
+    padding: 0.5em;
+    font-size: 35px;
+    font-weight: bold;
+}
+#lienC{
+    right: 3%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
 }
