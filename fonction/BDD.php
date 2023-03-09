@@ -1,4 +1,7 @@
 <?php
+    //--------------------------//
+    /////// Connexion BDD  ///////
+    //--------------------------//
     function ConnexionBD(){
         ///Connexion au serveur MySQL avec PDO
         $server = '145.14.156.192';

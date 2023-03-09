@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./image/logo.png">
     <title>Chat WA</title>
+    <!--gestion des sons-->
     <script> 
     let audioG = new Audio('./audio/wario.mp3');
     let audioO = new Audio('./audio/wariomath.mp3');
-    function go(){
+    function pseudoWario(){
         audioG.volume = 0.2;
         audioG.play();
     }
-    function out(){
+    function logoWario(){
         audioO.volume = 0.2;
         audioO.play();
     }
@@ -24,17 +25,20 @@
 <body>
     <!--Menu de navigation-->
     <header>
+            <!--champ de saisie pseudo-->
             <div>
-                <form onsubmit="go();">
+                <form onsubmit="pseudoWario();">
                     <label class="label" for="pseudo">Pseudo</label>
                     <input type="text" class="button" id="pseudo" name="pseudo" placeholder="Menwizz..." required/>
                     <input type="submit" class="button" name="rechercher" 
                     <?php if(isset($_GET['pseudo'])):?>value="Changer" <?php else: ?> value="Choisir" <?php endif;?>/>
                 </form>
             </div> 
+            <!--logo-->
             <div>
-                <a href="#" style="background-color: #588d9c;"><img class="logo" src="./image/logo.png" alt="LogoDuSite" onclick="out();"></a>
+                <a href="#" style="background-color: #588d9c;"><img class="logo" src="./image/logo.png" alt="LogoDuSite" onclick="logoWario();"></a>
             </div>
+            <!--deconnexion-->
             <div>
                 <?php if(isset($_GET['pseudo'])):?>
                     <form>
