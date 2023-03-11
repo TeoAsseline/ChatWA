@@ -1,6 +1,7 @@
 <!--page conversation-->
 <?php
     require("./fonction/datefonction.php");
+    require_once("./fonction/recuperer.php");
     //-------------------//
     /////// PSEUDO  ///////
     //-------------------//
@@ -39,5 +40,8 @@
         </form>
     </div>
     </main>
+    <script>
+        setTimeout("location.reload()", 4000);
+    </script>
 </body>
 </html>

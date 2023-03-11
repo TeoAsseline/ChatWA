@@ -12,7 +12,6 @@
             case "afficher":
                 $conv=$_GET['conv'];
                 echo $conv;
-                require_once("./fonction/recuperer.php");
                 require_once("./page/afficher.php");
                 break;
             //-------------------//
