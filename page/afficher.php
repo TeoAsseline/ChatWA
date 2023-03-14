@@ -1,21 +1,21 @@
 <!--page conversation-->
 <?php
+    session_start();
     require("./fonction/datefonction.php");
     require_once("./fonction/recuperer.php");
     //-------------------//
     /////// PSEUDO  ///////
     //-------------------//
-    if(isset($_GET['pseudo']) && $_GET['pseudo']!=null){
-        $pseudo=htmlspecialchars($_GET['pseudo']);
-        $pseudoR="?pseudo=".htmlspecialchars($_GET['pseudo']);
+    if(isset($_SESSION['pseudo']) && $_SESSION['pseudo']!=null){
+        $pseudo=htmlspecialchars($_SESSION['pseudo']);
     } else {
         $pseudo=null;
-        $pseudoR="";
     }
 ?>
 <main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--button retour-->
-    <a id="retour" href="index.php<?php echo $pseudoR;?>">Retour</a>
+    <a id="retour" href="index.php?page=salon">Retour</a>
     <!--nom conversation---->
     <h1 class="titre"><?php echo $Nconv[0]['nom'];?></h1>
     <div class="discussion">
@@ -38,10 +38,9 @@
             <input type="submit" class="button" name="envoyer" value="Envoyer"
             <?php if(!isset($_GET['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?>/>
         </form>
+        <a href="#" onclick="SALUT(); return false;">Test</a>
+        <script type="text/javascript" src="../js/oui.js"></script>
     </div>
     </main>
-    <script>
-        setTimeout("location.reload()", 4000);
-    </script>
 </body>
 </html>

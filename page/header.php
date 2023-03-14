@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!--header-->
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,31 +11,16 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./image/logo.png">
     <title>Chat WA</title>
-    <!--gestion des sons-->
-    <script> 
-    let audioG = new Audio('./audio/wario.mp3');
-    let audioO = new Audio('./audio/wariomath.mp3');
-    function pseudoWario(){
-        audioG.volume = 0.2;
-        audioG.play();
-    }
-    function logoWario(){
-        audioO.volume = 0.2;
-        audioO.play();
-    }
-    </script>
+    <script src="./js/audio.js"></script>
 </head>
 <body>
     <!--Menu de navigation-->
     <header>
             <!--champ de saisie pseudo-->
             <div>
-                <form onsubmit="pseudoWario();">
-                    <label class="label" for="pseudo">Pseudo</label>
-                    <input type="text" class="button" id="pseudo" name="pseudo" placeholder="Menwizz..." required/>
-                    <input type="submit" class="button" name="rechercher" 
-                    <?php if(isset($_GET['pseudo'])):?>value="Changer" <?php else: ?> value="Choisir" <?php endif;?>/>
-                </form>
+                <?php if(!isset($_SESSION['pseudo'])):?>
+                    <a class="button" name="connexion" href='index.php?page=connexion'>Connexion</a>
+                <?php endif;?>
             </div> 
             <!--logo-->
             <div>
@@ -40,13 +28,11 @@
             </div>
             <!--deconnexion-->
             <div>
-                <?php if(isset($_GET['pseudo'])):?>
-                    <form>
-                        <label class="label" id="affichP"><?php echo $_GET['pseudo'];?></label>
-                        <input type="submit" class="button" name="deconnexion" value="Déconnexion"/>
-                    </form>
+                <?php if(isset($_SESSION['pseudo'])):?>
+                    <label class="label" id="affichP"><?php echo $_SESSION['pseudo'];?></label>   
+                    <a class="button" name="Deconnexion" href='./fonction/deconnexion.php'>Deconnexion</a>
                 <?php else: ?>
-                    <label class="label" style="display:block;">Bienvenue sur Chat WA, veuillez entrer un pseudo pour commencer à WAAA !</label>
+                    <label class="label" style="display:block;">Bienvenue sur Chat WA, veuillez vous connecter pour commencer à WAAA !</label>
                 <?php endif;?>
             </div>     
     </header>

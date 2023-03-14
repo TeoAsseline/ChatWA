@@ -1,10 +1,11 @@
 <?php 
+    session_start();
     require_once('BDD.php');
     $sql = ConnexionBD();
     //------------------------------------//
     /////// recuperation de données  ///////
     //------------------------------------//
-    $pseudo = htmlspecialchars($_GET['pseudo']);
+    $pseudo = htmlspecialchars($_SESSION['pseudo']);
     $texte = htmlspecialchars($_GET['message']);
     $conv = htmlspecialchars($_GET['conv']);
     date_default_timezone_set('Europe/Paris');
@@ -17,5 +18,5 @@
 ?>
 <!--Redirection de page-->
 <script>
-  window.location.href = "../index.php?page=afficher&pseudo=<?php echo $pseudo?>&conv=<?php echo $conv;?>";
+  window.location.href = "../index.php?page=afficher&conv=<?php echo $conv;?>";
 </script>
