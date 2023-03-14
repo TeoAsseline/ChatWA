@@ -20,6 +20,8 @@ session_start();
             <div>
                 <?php if(!isset($_SESSION['pseudo'])):?>
                     <a class="button" name="connexion" href='index.php?page=connexion'>Connexion</a>
+                <?php else: ?>
+                    <label class="label" style="display:block;">Vous êtes connectés et vous pouvez maintenant chatter !</label>
                 <?php endif;?>
             </div> 
             <!--logo-->
@@ -30,7 +32,7 @@ session_start();
             <div>
                 <?php if(isset($_SESSION['pseudo'])):?>
                     <label class="label" id="affichP"><?php echo $_SESSION['pseudo'];?></label>   
-                    <a class="button" name="Deconnexion" href='./fonction/deconnexion.php'>Deconnexion</a>
+                    <a class="button" name="Deconnexion" href='./fonction/deconnexion.php'>Déconnexion</a>
                 <?php else: ?>
                     <label class="label" style="display:block;">Bienvenue sur Chat WA, veuillez vous connecter pour commencer à WAAA !</label>
                 <?php endif;?>

@@ -6,24 +6,12 @@ jaune - background: #f1d18a;
 background clair - background: #f0ece2; 
 */
 /*---------------------------*/
-/*TOUS LE SITE*/
-/*---------------------------*/
-*, body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0ece2; 
-    margin:0;
-}
-img{
-    width:75px;
-    background-color: white;
-}
-/*---------------------------*/
 /*CONNEXION*/
 /*---------------------------*/
 .index{
     padding: 20px 20px 0 20px;
     font-family: 'Roboto', sans-serif;
-    background: url("./image/logo.png") no-repeat center center fixed; 
+    background: url(../image/imgconnexionback.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -36,28 +24,21 @@ img{
     width: 470px;
     margin: auto;
     box-shadow: 0px 30px 125px -5px #000;
-    background-color: #fff;
   }
   /*Background Img*/
   .backimg{
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("./img/KayakpoloSign.jpg");
+    background-image: url(../image/connexionwario.png);
     background-size: cover;
-  }
-  .ligne {
-      background-color: #588d9c;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
   }
   .active{
     padding-left: 25px;
+    padding: 0.4em;
     color: #fff;
     background-color: #588d9c;
+    border:solid 2px #36626a;
   }
   .signinTitre{
     top: 175px;
@@ -73,7 +54,7 @@ img{
   }
   /*form-section*/
   .form-section{
-    padding: 50px 90px 0 90px;
+    padding: 50px 90px 70px 90px;
   }
   .errorL{
     background-color: white;
@@ -122,6 +103,18 @@ img{
     color: white;
     border: 1px solid #36626a;
    }
+/*---------------------------*/
+/*TOUS LE SITE*/
+/*---------------------------*/
+*, body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0ece2; 
+    margin:0;
+}
+img{
+    width:75px;
+    background-color: white;
+}
 /*---------------------------*/
 /*HEADER*/
 /*---------------------------*/

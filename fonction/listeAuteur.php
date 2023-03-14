@@ -3,7 +3,7 @@
     $db = ConnexionBD();
     $listeA=null;
     //-------------------------------------------//
-    /////// récupération des conversations  ///////
+    /////// récupération des auteurs        ///////
     //-------------------------------------------//
     $req = $db->prepare("SELECT DISTINCT auteur FROM chat where conv=:conv");
     $req->execute(array(":conv"=>$idconv));

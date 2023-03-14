@@ -6,7 +6,7 @@
         $page=$_GET['page'];
         switch ($page) {
             //-------------------------//
-            /////// CONVERSATION  ///////
+            /////// CONNEXION     ///////
             //-------------------------//
             case "connexion":
                 require_once("./page/connexion.php");

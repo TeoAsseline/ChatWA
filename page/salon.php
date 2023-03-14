@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <main>
     <!--nom salon-->
     <h1 class="titre">Salon des Conversations</h1>
@@ -14,14 +11,17 @@
                         <img src="./image/fleche-droite.png" alt="Lien Conv"/>
                     </a>
                 </div>
-                <?php $idconv=$conv['id_conv'];
-                require_once("./fonction/listeAuteur.php");                
+                <?php 
+                    $idconv=$conv['id_conv'];
+                    require("./fonction/listeAuteur.php");                
                 ?>
                 <div>
                     <p style=" background-color: white;">
                     <?php foreach($listeA as $auteur){
                         echo " // ".$auteur['auteur'];
-                    } echo " // ";?>
+                        }
+                        echo " // ";
+                    ?>
                     </p>
                 </div>
             </div>

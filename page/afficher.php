@@ -1,6 +1,5 @@
 <!--page conversation-->
 <?php
-    session_start();
     require("./fonction/datefonction.php");
     require_once("./fonction/recuperer.php");
     //-------------------//
@@ -13,7 +12,6 @@
     }
 ?>
 <main>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--button retour-->
     <a id="retour" href="index.php?page=salon">Retour</a>
     <!--nom conversation---->
@@ -34,12 +32,14 @@
             <input type="hidden" name="pseudo" value="<?php echo $pseudo?>" />
             <input type="hidden" name="conv" value="<?php echo $Nconv[0]['id_conv']?>" />
             <input type="text" id="message" name="message" placeholder="Bonjour, ça va ?..." 
-            <?php if(!isset($_GET['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?> required/>
+            <?php if(!isset($_SESSION['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?> required/>
             <input type="submit" class="button" name="envoyer" value="Envoyer"
-            <?php if(!isset($_GET['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?>/>
+            <?php if(!isset($_SESSION['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?>/>
         </form>
+        <!--TEST -->
         <a href="#" onclick="SALUT(); return false;">Test</a>
         <script type="text/javascript" src="../js/oui.js"></script>
+        <!--TEST -->
     </div>
     </main>
 </body>
