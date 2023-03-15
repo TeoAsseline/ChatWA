@@ -17,7 +17,14 @@
             case "afficher":
                 require_once("./page/header.php");
                 $conv=$_GET['conv'];
-                echo $conv;
+                //-------------------//
+                /////// PSEUDO  ///////
+                //-------------------//
+                if(isset($_SESSION['pseudo']) && $_SESSION['pseudo']!=null){
+                    $pseudo=htmlspecialchars($_SESSION['pseudo']);
+                } else {
+                    $pseudo=null;
+                }
                 require("./page/afficher.php");
                 break;
             //-------------------//

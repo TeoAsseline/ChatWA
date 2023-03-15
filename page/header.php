@@ -13,7 +13,7 @@ session_start();
     <title>Chat WA</title>
     <script type="text/javascript" src="./js/audio.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./js/oui.js"></script>
+    <script type="text/javascript" src="./js/refresh.js"></script>
 </head>
 <body>
     <!--Menu de navigation-->

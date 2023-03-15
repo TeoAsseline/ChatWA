@@ -190,6 +190,9 @@ main {
     margin-right: 25%;
     box-shadow: 7px 5px 5px gray;
 }
+#discussionMessage{
+  background-color: white;
+}
 .divM{
     border:solid 2px #36626a;
     background-color: white;
