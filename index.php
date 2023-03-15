@@ -18,7 +18,7 @@
                 require_once("./page/header.php");
                 $conv=$_GET['conv'];
                 echo $conv;
-                require_once("./page/afficher.php");
+                require("./page/afficher.php");
                 break;
             //-------------------//
             /////// SALON   ///////

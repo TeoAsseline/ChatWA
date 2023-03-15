@@ -28,7 +28,7 @@
             </div>
         <?php endforeach;?>
         <!--envoie de message-->
-        <form id="messageF" action="./fonction/enregistrer.php">
+        <form id="messageF" method="post">
             <input type="hidden" name="pseudo" value="<?php echo $pseudo?>" />
             <input type="hidden" name="conv" value="<?php echo $Nconv[0]['id_conv']?>" />
             <input type="text" id="message" name="message" placeholder="Bonjour, ça va ?..." 
@@ -36,10 +36,6 @@
             <input type="submit" class="button" name="envoyer" value="Envoyer"
             <?php if(!isset($_SESSION['pseudo'])){ echo 'style="color:#588d9c"';echo 'disabled="true"';}?>/>
         </form>
-        <!--TEST -->
-        <a href="#" onclick="SALUT(); return false;">Test</a>
-        <script type="text/javascript" src="../js/oui.js"></script>
-        <!--TEST -->
     </div>
     </main>
 </body>
