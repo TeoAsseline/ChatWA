@@ -16,6 +16,9 @@
             //-------------------------//
             case "afficher":
                 require_once("./page/header.php");
+                //-------------------------//
+                /////// CONVERSATION  ///////
+                //-------------------------//
                 $conv=$_GET['conv'];
                 //-------------------//
                 /////// PSEUDO  ///////
@@ -25,6 +28,11 @@
                 } else {
                     $pseudo=null;
                 }
+                //-------------------//
+                /////// DATE    ///////
+                //-------------------//
+                date_default_timezone_set('Europe/Paris');
+                $datearrive=date("y-m-d h:i:s",time());
                 require("./page/afficher.php");
                 break;
             //-------------------//
