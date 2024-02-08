@@ -7,7 +7,7 @@
         $server = 'localhost';
         $login = 'root';
         $mdp = '';
-        $db = 'u563109936_R410_Messageri';
+        $db = 'chatwa';
         try {
             $linkpdo = new PDO("mysql:host=$server;dbname=$db;charset=utf8mb4", $login, $mdp);
             $linkpdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
